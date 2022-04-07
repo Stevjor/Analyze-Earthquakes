@@ -6,6 +6,8 @@ public class EarthQuakeClient {
         // TODO Auto-generated constructor stub
     }
 
+    //Returns an ArrayList of type QuakeEntry of all the earthquakes from 
+    //quakeData that have a magnitude larger than magMin.
     public ArrayList<QuakeEntry> filterByMagnitude(ArrayList<QuakeEntry> quakeData,
     double magMin) {
         ArrayList<QuakeEntry> answer = new ArrayList<QuakeEntry>();
@@ -18,6 +20,8 @@ public class EarthQuakeClient {
         return answer;
     }
 
+    //Returns an ArrayList of type QuakeEntry of all the earthquakes from 
+    //quakeData that are less than distMax from the location from.
     public ArrayList<QuakeEntry> filterByDistanceFrom(ArrayList<QuakeEntry> quakeData,
     double distMax,
     Location from) {
@@ -32,6 +36,8 @@ public class EarthQuakeClient {
         return answer;
     }
     
+    //Returns an ArrayList of type QuakeEntry of all the earthquakes from quakeData 
+    //whose depth is between minDepth and maxDepth, exclusive.
     public ArrayList<QuakeEntry> filterByDepth(ArrayList<QuakeEntry> quakeData,
     double minDepth, 
     double maxDepth) {
@@ -44,6 +50,13 @@ public class EarthQuakeClient {
         return result;
     }
     
+    //return an ArrayList of type QuakeEntry of all the earthquakes from 
+    //quakeData whose titles have the given phrase found at location where 
+    //(“start” means the phrase must start the title, “end” means the phrase
+    //must end the title and “any” means the phrase is a substring anywhere in
+    // the title.)
+
+
     public ArrayList<QuakeEntry> filterByPhrase(ArrayList<QuakeEntry> quakeData,
     String where, String phrase) {
         ArrayList<QuakeEntry> answer = new ArrayList<QuakeEntry>();
@@ -79,6 +92,8 @@ public class EarthQuakeClient {
 
     }
 
+    //Uses the filterByMagnitude method to print the earthquakes that
+    //are greater than the given parameter.
     public void bigQuakes() {
         EarthQuakeParser parser = new EarthQuakeParser();
         //String source = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom";
@@ -93,6 +108,9 @@ public class EarthQuakeClient {
         System.out.println("Found " + result.size() + " quakes that match that criteria.");
     }
 
+    //Prints out the earthquakes within a specified distance 
+    //to a specified city using the method filterByDistanceFrom written
+    //previously.
     public void closeToMe(){
         EarthQuakeParser parser = new EarthQuakeParser();
         //String source = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom";
@@ -115,6 +133,8 @@ public class EarthQuakeClient {
         // TODO
     }
 
+    //Uses filterByDepth and print all the earthquakes from a data source whose 
+    //depth is between a given minimum and maximum value. 
     public void quakesOfDepth() {
         EarthQuakeParser parser = new EarthQuakeParser();
         String source = "data/nov20quakedatasmall.atom";
@@ -137,6 +157,9 @@ public class EarthQuakeClient {
         " quakes that match that criteria.");
     }
     
+    //Prints all the earthquakes from a data source that have phrase in their 
+    //title in a given position in the title using the filterByPhrase
+    //method.
     public void quakesByPhrase() {
         EarthQuakeParser parser = new EarthQuakeParser();
         String source = "data/nov20quakedatasmall.atom";
