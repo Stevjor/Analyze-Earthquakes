@@ -1,4 +1,13 @@
 #BlueJ class context
 comment0.target=LargestQuakes
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ LargestQuakes\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-numComments=1
+comment1.params=
+comment1.target=void\ findLargestQuakes()
+comment1.text=\r\n\ \ \ \ \ \ \ Calls\ getLargest\ to\ print\ the\ given\ number\ of\r\n\ \ \ \ \ \ \ earthquakes\ of\ largest\ magnitude\r\n
+comment2.params=data
+comment2.target=int\ indexOfLargest(java.util.ArrayList)
+comment2.text=\r\n\ \ \ \ \ \ \ \ Returns\ an\ integer\ representing\ the\ index\ location\ in\ data\ of\ the\ \r\n\ \ \ \ \ \ \ \ earthquake\ with\ the\ largest\ magnitude.\ \r\n
+comment3.params=quakeData\ howMany
+comment3.target=java.util.ArrayList\ getLargest(java.util.ArrayList,\ int)
+comment3.text=\r\n\ \ \ \ \ \ \ Returns\ an\ ArrayList\ of\ type\ QuakeEntry\ of\ the\ top\ howMany\ largest\ \r\n\ \ \ \ \ \ \ magnitude\ earthquakes\ from\ quakeData.\r\n
+numComments=4
