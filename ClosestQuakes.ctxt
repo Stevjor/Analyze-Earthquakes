@@ -2,6 +2,8 @@
 comment0.target=ClosestQuakes
 comment1.params=quakeData\ current\ howMany
 comment1.target=java.util.ArrayList\ getClosest(java.util.ArrayList,\ Location,\ int)
+comment1.text=\r\n\ \ \ \ \ \ \ Finds\ the\ closest\ number\ of\ howMany\ earthquakes\ to\ the\ current\ Location\ \r\n\ \ \ \ \ \ \ and\ return\ them\ in\ an\ ArrayList\ of\ type\ QuakeEntry.\r\n
 comment2.params=
 comment2.target=void\ findClosestQuakes()
+comment2.text=\r\n\ \ \ \ \ \ \ Reads\ in\ data\ on\ earthquakes\ storing\ them\ in\ the\ ArrayList\ list\ and\ \r\n\ \ \ \ \ \ \ prints\ how\ many\ quakes\ there\ are\ after\ calling\ the\ method\ getClosest\ to\ \r\n\ \ \ \ \ \ \ determine\ the\ given\ number\ of\ closest\ earthquakes\ in\ list\ and\ prints\ \r\n\ \ \ \ \ \ \ information\ about\ those\ quakes\ and\ how\ close\ they\ are\ to\ the\ provided\r\n\ \ \ \ \ \ \ location\ from\ the\ user.\ \r\n
 numComments=3
