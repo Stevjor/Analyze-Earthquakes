@@ -137,11 +137,11 @@ public class EarthQuakeClient {
     //depth is between a given minimum and maximum value. 
     public void quakesOfDepth() {
         EarthQuakeParser parser = new EarthQuakeParser();
-        String source = "data/nov20quakedatasmall.atom";
+        String source = "data/nov20quakedata.atom";
         ArrayList<QuakeEntry> list = parser.read(source);
         System.out.println("Read data for " + list.size() + " quakes.");
         
-        double minimumDepth = -10000.0;
+        double minimumDepth = -8000.0;
         double maximumDepth = -5000.0;
         System.out.println("Find quakes between " + minimumDepth + 
         " and " + maximumDepth + ".");
@@ -162,12 +162,12 @@ public class EarthQuakeClient {
     //method.
     public void quakesByPhrase() {
         EarthQuakeParser parser = new EarthQuakeParser();
-        String source = "data/nov20quakedatasmall.atom";
+        String source = "data/nov20quakedata.atom";
         ArrayList<QuakeEntry> list = parser.read(source);
         System.out.println("Read data for " + list.size() + " quakes.");
         
-        String whereToSearch = "start";
-        String phraseToSearch = "Explosion";
+        String whereToSearch = "any";
+        String phraseToSearch = "Creek";
         
         ArrayList<QuakeEntry> phraseFiltered = filterByPhrase(list, 
         whereToSearch, phraseToSearch);
